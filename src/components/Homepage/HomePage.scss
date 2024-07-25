@@ -1,0 +1,267 @@
+.headerContain {
+
+  background-color: rgb(255 255 255 / 91%) !important;
+  color: black !important;
+  position: fixed !important;
+  z-index: 777 !important;
+  box-shadow: none !important;
+
+  .title {
+    flex-grow: 1;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .menuItem {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  .menuItem:hover {
+    text-decoration: underline;
+  }
+
+  .logo {
+    height: 40px;
+    padding: 0 !important;
+  }
+
+}
+
+/// HomePort ----
+
+.sliderImage {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  background-position: center;
+  background: none;
+}
+
+.carouselItem {
+  background: none !important;
+  background-color: transparent;
+  position: relative;
+}
+
+.css-1m9128y {
+  display: none !important;
+}
+
+
+.imageContainer {
+  position: relative;
+  background-color: white !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+}
+
+.overlayText {
+  text-align: center;
+  font-weight: bold;
+  font-size: 4.5vw !important;
+}
+
+.overlaydesgn {
+  position: absolute !important;
+  bottom: -125px !important;
+  font-size: 15px !important;
+  text-transform: uppercase !important;
+  color: #ffffff80;
+}
+
+.descriptionText {
+  margin-bottom: 20px;
+}
+
+.bookingButton {
+  margin-top: 10px;
+  background-color: white !important;
+  color: black !important;
+  font-size: 12 !important;
+  font-weight: 700 !important;
+  border-radius: 0 !important;
+}
+
+.bookingButton:hover {
+  background-color: red !important;
+  color: white !important;
+}
+
+
+/// OurService ---
+
+.service-container {
+  padding: 35px;
+  background-color: #f5f5f5;
+  padding-top: 15px !important;
+
+  .title {
+    margin-bottom: 20px !important;
+    text-align: center;
+    color: #333;
+  }
+
+  .service-card {
+    height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.479);
+    transition: transform 0.3s;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .service-card:hover {
+    transform: scale(1.05);
+  }
+
+  .service-name {
+    font-weight: bold;
+    color: white;
+  }
+
+  .service-description {
+    color: white;
+  }
+
+  .card-content {
+    background-color: rgba(0, 0, 0, 0.329) !important;
+    padding: 10px !important;
+    width: 100%;
+  }
+}
+
+/// BLOG ----------
+
+.mainBlog {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../../assets/images/blog_bg.jpg');
+
+  .gridPad {
+    padding: 50px;
+  }
+
+  .card {
+    transition: transform 0.2s;
+  }
+
+  .bloghead {
+    padding-top: 30px !important;
+    color: white !important;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .cardMedia {
+    height: 200px;
+  }
+
+}
+
+/// AboutPage --------
+
+.containedbtn {
+  background-color: white !important;
+  color: black !important;
+  border-radius: 0 !important;
+}
+
+.containedbtn:hover {
+  background-color: red !important;
+  color: white !important;
+}
+
+@media (max-width:900px) {
+  .aboutContain {
+    display: flex;
+    flex-direction: column !important;
+    gap: 15px;
+  }
+}
+
+
+//// Contact Us ----
+
+
+.bgimgconatct {
+  background-image: url('../../assets/images/backimg.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+color: white !important;
+
+.css-0 {
+  text-align: left !important;
+}
+
+.contactmain {
+  padding: 60px 35px !important;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0 0 0 / 56%) !important;
+
+}
+
+.nameinput {
+  background-color: rgba(255, 255, 255, 0.582) !important;
+}
+
+
+
+.headconatct {
+  font-size: 35px !important;
+  font-weight: 500 !important;
+  margin-bottom: 20px !important;
+}
+.disflx {
+  padding-left: 50px !important;
+}
+}
+
+
+@media (max-width:470px) {
+  .headerContain .menuItem {
+    font-size: 11px;
+}
+.headerContain .title {
+  font-size: 11px;
+}
+}
+
+.headerContain2 {
+display: flex !important;
+width: 100% !important;
+  background-color: rgba(0, 0, 0, 0.486) !important;
+  color: black !important;
+  position: fixed !important;
+  // z-index: 777 !important;
+  box-shadow: none !important;
+  .logo {
+    height: 40px;
+    padding: 0 !important;
+  }
+.toolbarmi {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+}
