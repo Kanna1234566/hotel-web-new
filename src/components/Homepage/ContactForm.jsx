@@ -10,6 +10,10 @@ import emailjs from '@emailjs/browser';
 import { useNavigate } from 'react-router-dom';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from './firebase';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const StyledButton = styled(Button)({
   color:"black",
@@ -68,10 +72,10 @@ const ContactForm = () => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          toast.success('Email sent successfully!');
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          toast.error('Failed to send email: ' + error.text);
         },
       );
   };
@@ -85,6 +89,16 @@ const ContactForm = () => {
   };
 
   const handleSubmit = async () => {
+    
+
+    let messages = JSON.parse(localStorage.getItem('messages')) || [];
+    console.log("dada", messages);
+    // Add the new message to the array
+    messages.push(inputs);
+    
+    // Save the updated array back to local storage
+    localStorage.setItem('messages', JSON.stringify(messages));
+
     console.log("send", inputs)
     try {
       await addDoc(collection(db, 'messages'), inputs);
@@ -171,6 +185,7 @@ const ContactForm = () => {
         </Grid>
       </Grid>
     </ContactArea>
+    <ToastContainer />
     </div>
   );
 };

@@ -28,19 +28,20 @@ const Header = ({ scrollToSection, refs }) => {
         >
           HOME
         </Typography>
-        <Typography
-          data-aos="fade-down-left"
-          className="menuItem"
-          onClick={() => scrollToSection(refs.aboutRef)}
-        >
-          ABOUT
-        </Typography>
+      
         <Typography
           data-aos="fade-down-left"
           className="menuItem"
           onClick={() => scrollToSection(refs.serviceRef)}
         >
           OUR ROOM
+        </Typography>
+        <Typography
+          data-aos="fade-down-left"
+          className="menuItem"
+          onClick={() => scrollToSection(refs.aboutRef)}
+        >
+          ABOUT
         </Typography>
         <Typography
           data-aos="fade-down-left"

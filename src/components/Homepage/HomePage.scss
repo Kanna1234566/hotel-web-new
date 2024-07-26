@@ -246,22 +246,3 @@ color: white !important;
 }
 }
 
-.headerContain2 {
-display: flex !important;
-width: 100% !important;
-  background-color: rgba(0, 0, 0, 0.486) !important;
-  color: black !important;
-  position: fixed !important;
-  // z-index: 777 !important;
-  box-shadow: none !important;
-  .logo {
-    height: 40px;
-    padding: 0 !important;
-  }
-.toolbarmi {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-}
