@@ -8,6 +8,8 @@ import ClearIcon from '@mui/icons-material/Clear';
 import DownloadIcon from '@mui/icons-material/Download';
 import { jsPDF } from 'jspdf';
 import autoTable from 'jspdf-autotable';
+import Swal from 'sweetalert2';
+
 
 const Admin = () => {
   const [data, setData] = useState([]);
@@ -50,9 +52,27 @@ const Admin = () => {
     doc.save(`${item.from_name}_Booking_Report.pdf`);
   };
 
-  const handleClear = () => {
-    localStorage.clear();
-    window.location.reload();
+ const handleClear = () => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, clear it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.clear();
+        Swal.fire(
+          'Cleared!',
+          'Your data has been cleared.',
+          'success'
+        ).then(() => {
+          window.location.reload();
+        });
+      }
+    });
   };
 
   return (

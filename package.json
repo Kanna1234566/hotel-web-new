@@ -32,7 +32,8 @@
     "react-scroll": "^1.9.0",
     "react-toastify": "^10.0.5",
     "sass": "^1.77.8",
-    "styled-components": "^6.1.12"
+    "styled-components": "^6.1.12",
+    "sweetalert2": "^11.12.3"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
